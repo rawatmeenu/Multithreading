@@ -21,3 +21,17 @@ Thread-based Multitasking (Multithreading): share the same address space. A thre
 1. implementing Runnable interface. :  Runnable interface should be implemented by any class whose instances are intended to be executed by a thread. Thread class extends Object class and implements Runnable interface.
 2. by extending Thread class. : provides constructors & methods to perform operations on thread.
 
+## THREAD SCHEDULER
+A component of Java that decides which thread to run or execute and which thread to wait
+if there is more than one thread in the runnable state, it is up to the thread scheduler to pick one of the threads and ignore the other ones. 
+There are two factors for scheduling a thread i.e. Priority and Time of arrival.
+Priority: Priority of each thread lies between 1 to 10. If a thread has a higher priority, it means that thread has got a better chance of getting picked up by the thread scheduler.
+Time of Arrival: Suppose two threads of the same priority enter the runnable state, Thread arrives foirst will get the priority first.
+The thread scheduler selects the thread that has the highest priority, and the thread begins the execution of the job. If a thread is already in runnable state and another thread (that has higher priority) reaches in the runnable state, then the current thread is pre-empted from the processor, and the arrived thread with higher priority gets the CPU time. When two threads (Thread 2 and Thread 3) having the same priorities and arrival time, the scheduling will be decided on the basis of FCFS algorithm. Thus, the thread that arrives first gets the opportunity to execute first.
+
+## Thread.sleep() : 
+sleep() is being used to halt the working of a thread for a given amount of time.
+there are 2 variant of sleep(). First one accepts only an arguments, whereas the other variant accepts two arguments.
+public static void sleep(long mls) throws InterruptedException   
+public static void sleep(long mls, int n) throws InterruptedException   
+
