@@ -16,4 +16,8 @@ Thread-based Multitasking (Multithreading): share the same address space. A thre
 3. Blocked/waiting: Whenever a thread is inactive for a span of time (not permanently) then, either the thread is in the blocked state or is in the waiting state. When the main thread invokes the join() method then, it is said that the main thread is in the waiting state. The main thread then waits for the child threads to complete their tasks. When the child threads complete their job, a notification is sent to the main thread, which again moves the thread from waiting to the active state.
 4. timed waiting: hread lies in the waiting state for a specific span of time, and not forever. 
 5. terminate: A thread reaches the termination state. When a thread has finished its job OR caught unhandled exception.
-   
+
+## TWOWAYS TO CREATE A THREAD:
+1. implementing Runnable interface. :  Runnable interface should be implemented by any class whose instances are intended to be executed by a thread. Thread class extends Object class and implements Runnable interface.
+2. by extending Thread class. : provides constructors & methods to perform operations on thread.
+
