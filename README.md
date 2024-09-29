@@ -34,4 +34,22 @@ sleep() is being used to halt the working of a thread for a given amount of time
 there are 2 variant of sleep(). First one accepts only an arguments, whereas the other variant accepts two arguments.
 ### public static void sleep(long mls) throws InterruptedException   
 ### public static void sleep(long mls, int n) throws InterruptedException   
+Whenever the Thread.sleep() methods execute, it always halts the execution of the current thread.
+Whenever another thread does interruption while the current thread is already in the sleep mode, then the InterruptedException is thrown.
+
+Thread cannot run twice. No. After starting a thread, it can never be started again. If you does so, an IllegalThreadStateException is thrown. In such case, thread will run once but for second time, it will throw exception.
+
+## Thread priority
+Each thread has a priority. Priorities are represented by a number between 1 and 10.
+public final int getPriority(): return priority of thread
+public final void setPriority(int newPriority): to set n update the priority(1-10). default: 5
+if value goes beyond 10 it gives IllegalArgumentException.
+
+## DEAMON THREAD
+a service provider thread that provides services to the user thread.  when all the user threads dies, JVM terminates this thread automatically bcz it provides services to user thread for background supporting task and if there is no user the no need. it's a low priority thread.
+If you want to make a user thread as Daemon, it must not be started otherwise it will throw IllegalThreadStateException. it must be set deamon first the start.
+
+## JOIN THREAD
+permits one thread to wait until the other thread to finish its execution.
+When the join() method is invoked, the current thread stops its execution and the thread goes into the wait state. The current thread remains in the wait state until the thread on which the join() method is invoked has achieved its dead state. If interruption of the thread occurs, then it throws the InterruptedException.
 
