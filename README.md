@@ -32,6 +32,6 @@ The thread scheduler selects the thread that has the highest priority, and the t
 ## Thread.sleep() : 
 sleep() is being used to halt the working of a thread for a given amount of time.
 there are 2 variant of sleep(). First one accepts only an arguments, whereas the other variant accepts two arguments.
-public static void sleep(long mls) throws InterruptedException   
-public static void sleep(long mls, int n) throws InterruptedException   
+### public static void sleep(long mls) throws InterruptedException   
+### public static void sleep(long mls, int n) throws InterruptedException   
 
