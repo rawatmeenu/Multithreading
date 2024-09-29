@@ -56,3 +56,4 @@ When the join() method is invoked, the current thread stops its execution and th
 ## THREAD POOL
 Java Thread pool represents a group of worker threads that are waiting for the job and reused many times.
 In the case of a thread pool, a group of fixed-size threads is created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job, the thread is contained in the thread pool again.
+A ThreadGroup represents a set of threads. A thread group can also include the other thread group. The thread group creates a tree in which every thread group except the initial thread group has a parent.
